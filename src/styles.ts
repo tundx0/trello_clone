@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+type DragPreviewContainerProps = {
+  isHidden?: boolean;
+};
+
+export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
+  opacity: ${(props) => (props.isHidden ? 0.3 : 1)};
+`;
+
 export const AppContainer = styled.div`
   align-items: flex-start;
   background-color: #3179ba;
@@ -36,14 +44,14 @@ export const CardContainer = styled.div`
 `;
 
 type AddItemButtonProps = {
-  $dark?: boolean;
+  dark?: boolean;
 };
 
 export const AddItemButton = styled.button<AddItemButtonProps>`
   background-color: #ffffff3d;
   border-radius: 3px;
   border: none;
-  color: ${(props) => (props.$dark ? "#000" : "#fff")};
+  color: ${(props) => (props.dark ? "#000" : "#fff")};
   cursor: pointer;
   max-width: 300px;
   padding: 10px 12px;

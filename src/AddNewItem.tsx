@@ -21,7 +21,7 @@ const AddNewItem = ({ onAdd, toggleButtonText, dark }: AddNewItemType) => {
     );
   }
   return (
-    <AddItemButton $dark={dark} onClick={() => setShowForm(true)}>
+    <AddItemButton dark={dark} onClick={() => setShowForm(true)}>
       {toggleButtonText}
     </AddItemButton>
   );
