@@ -1,4 +1,4 @@
-import { findItemByIndexId, moveItem } from "../utils/arrayUtils";
+import { findItemByIndexId, moveItem } from "../utils";
 import { Action } from "./actions";
 import { nanoid } from "nanoid";
 import { DragItem } from "../DragItem";
